@@ -1,11 +1,7 @@
 package org.example;
 
-/**
- * Klasa Vector2D implementująca IVector [cite: 12]
- */
 public class Vector2D implements IVector {
 
-    // Prywatne pola dla współrzędnych [cite: 10, 11]
     private final double x;
     private final double y;
 
@@ -23,12 +19,10 @@ public class Vector2D implements IVector {
     public double cdot(IVector param) { // [cite: 15, 19]
         double[] paramComps = param.getComponents();
 
-        // Współrzędne tego wektora (z=0) [cite: 166]
         double x1 = this.x;
         double y1 = this.y;
         double z1 = 0;
 
-        // Współrzędne wektora 'param'
         double x2 = paramComps.length > 0 ? paramComps[0] : 0;
         double y2 = paramComps.length > 1 ? paramComps[1] : 0;
         double z2 = paramComps.length > 2 ? paramComps[2] : 0;
